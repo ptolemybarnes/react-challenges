@@ -1,0 +1,23 @@
+{
+  "todos": [
+    {
+      "id": "f2cb2360-28cc-11ea-8afd-41dcc78ed63e",
+      "text": "dsadsa",
+      "isCompleted": false
+    },
+    {
+      "id": "f37a4f20-28cc-11ea-8afd-41dcc78ed63e",
+      "text": "dsadsadsa",
+      "isCompleted": false
+    },
+    {
+      "id": "c57e4ac0-2aef-11ea-b405-4b1d1c1cdae6",
+      "text": "Walk the dog",
+      "isCompleted": false
+    },
+    {
+      "text": "dsa",
+      "id": "6bf706f0-2b2f-11ea-ac4a-6d823bc4151c"
+    }
+  ]
+}
