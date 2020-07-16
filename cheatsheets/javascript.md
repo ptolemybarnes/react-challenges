@@ -49,12 +49,12 @@ const fooBar = (a, b, c) =>
 This is really a variation on the arrow function one-liner. But it's so common that it's worth listing here.
 
 ```js
-// no braces, return implicit
+// no braces, return implicit. The surrounding () are to tell the interpreter that the '{}' means an object, not a block (I guess :-p).
 const fooBar = (a, b, c) => ({
   result: a + b + c
 })
 
-console.log(fooBar(1, 2, 3)) // { result: 6 }
+console.log(fooBar(1, 2, 3)) // => { result: 6 }
 ```
 
 ## How do functions take arguments?
@@ -76,6 +76,42 @@ Here you pass values inside an object, which can be deconstructed in the argumen
 const fooBar = ({ baz, quux }) => {
   return `${baz}, ${quux}`
 }
+
 fooBar({ baz: 'Hello', quux: 'World!' })
 // 'Hello, World!'
+
+// or...
+const args = { baz: 'Hello', quux: 'World!' }
+fooBar(args)
+// 'Hello, World!'
+```
+
+### Positional + Named/keyword arguments
+
+The two styles above can coexist.
+
+```js
+const fooBar = ({ baz, quux }, logger) => {
+  logger(`${baz}, ${quux}`)
+}
+
+fooBar({ baz: 'Hello', quux: 'World!' }, logToCloudWatch)
+// => 'Hello, World!'
+```
+
+
+## Destructuring assignment
+
+## Object destructuring
+
+```js
+const user = {
+  id: 42,
+  isVerified: true
+};
+
+const { id, isVerified } = user;
+
+console.log(id); => // 42
+console.log(isVerified); => // true
 ```
