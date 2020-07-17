@@ -1,6 +1,6 @@
 # Javascript Cheatsheet
 
-## How do I declare a function? Let me count the ways...
+## How do I declare a function?
 
 ### Named function
 
@@ -12,6 +12,7 @@ function fooBar(a, b, c) {
  // requires explicit return at the end.
  return a + b + c;
 }
+```
 
 ### Anonymous function
 
@@ -21,6 +22,7 @@ Same as above, except the function is not named.
 function(a, b, c) {
  // ...
 }
+```
 
 ### Arrow functions
 
@@ -114,4 +116,14 @@ const { id, isVerified } = user;
 
 console.log(id); => // 42
 console.log(isVerified); => // true
+```
+
+## Array destructuring
+
+```js
+const user = ['Amy', 32]
+const [ name, age ] = user;
+
+console.log(name); => // 'Amy'
+console.log(age); => // 32
 ```
