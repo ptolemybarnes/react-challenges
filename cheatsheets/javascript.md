@@ -104,7 +104,7 @@ fooBar({ baz: 'Hello', quux: 'World!' }, logToCloudWatch)
 
 ## Destructuring assignment
 
-## Object destructuring
+### Object destructuring
 
 ```js
 const user = {
@@ -118,7 +118,7 @@ console.log(id); => // 42
 console.log(isVerified); => // true
 ```
 
-## Array destructuring
+### Array destructuring
 
 ```js
 const user = ['Amy', 32]
@@ -126,4 +126,50 @@ const [ name, age ] = user;
 
 console.log(name); => // 'Amy'
 console.log(age); => // 32
+```
+
+## Module exports / imports
+
+### Default export / import
+
+A function/class/object/whatever exported as the default export...
+```js
+// foo.js
+
+const Foo = () => {
+  // ...etc
+}
+
+export default Foo;
+```
+
+... can be imported
+```js
+// bar.js
+
+import Foo from './foo.js'
+// ...etc
+```
+
+### Named export / import
+
+A function/class/object/whatever exported as a named export...
+```js
+// utils.js
+
+const Foo = () => {
+  // ...etc
+}
+
+const Bar = () => {
+  // ...etc
+}
+
+export { Foo, Bar };
+```
+
+... can be imported
+``` js
+import { Foo, Bar } from './utils.js'
+// ...etc
 ```
