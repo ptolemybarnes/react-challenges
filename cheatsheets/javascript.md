@@ -102,7 +102,7 @@ fooBar({ baz: 'Hello', quux: 'World!' }, logToCloudWatch)
 ```
 
 
-## Destructuring assignment
+## Destructuring / restructuring assignment
 
 ### Object destructuring
 
@@ -126,6 +126,41 @@ const [ name, age ] = user;
 
 console.log(name); => // 'Amy'
 console.log(age); => // 32
+```
+
+### Object restructuring\*
+
+\*I made this term up.
+
+You can 'spread' an object to copy all its keys and values into another object.
+```js
+const user = { name: 'James', age: 32 }
+const userCopy = { ...user }
+console.log(userCopy) // => { name: 'James', age: 32 }
+```
+
+Spreading an object overwrites properties with the same key:
+```js
+const user = { name: 'James', age: 32 }
+const userCopy = { name: 'John', ...user }
+console.log(userCopy) // => { name: 'James', age: 32 }
+```
+
+Properties to the right overwrite those to the left:
+```js
+const user = { name: 'James', age: 32 }
+const userCopy = { ...user, name: 'John' }
+console.log(userCopy) // => { name: 'John', age: 32 }
+```
+
+### Array restructuring
+
+Similar to above, an array can be spread into another array:
+
+```js
+const primes = [2, 3, 5, 7, 11, 13, 17]
+const primesCopy = [ ...primes ]
+console.log(primesCopy) // => [2, 3, 5, 7, 11, 13, 17]
 ```
 
 ## Module exports / imports
