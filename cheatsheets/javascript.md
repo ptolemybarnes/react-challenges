@@ -36,7 +36,7 @@ const fooBar = (a, b, c) => {
 }
 ```
 
-### Arrow function w/out braces
+#### Arrow function w/out braces
 ```js
 // no braces, return implicit
 const fooBar = (a, b, c) => a + b + c
@@ -44,9 +44,12 @@ const fooBar = (a, b, c) => a + b + c
 // though usually written on one line, it can be spread across multiple lines.
 const fooBar = (a, b, c) =>
   a + b + c
+
+// lispy one-liner
+const fooBar = (a, b, c) => (a + b + c)
 ```
 
-### Arrow function returning object
+#### Arrow function returning object
 
 This is really a variation on the arrow function one-liner. But it's so common that it's worth listing here.
 
@@ -98,7 +101,6 @@ const fooBar = ({ baz, quux }, logger) => {
 }
 
 fooBar({ baz: 'Hello', quux: 'World!' }, logToCloudWatch)
-// => 'Hello, World!'
 ```
 
 
